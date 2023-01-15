@@ -5,6 +5,7 @@ class Client {
   private $soap_client;
 
   public function __construct(){
+    ini_set('default_socket_timeout', 5000);
     $options = array(
       'uri' => 'http://localhost:8080/server.php',
       'location' => 'http://localhost:8080/server.php',
